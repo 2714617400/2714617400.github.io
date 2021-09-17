@@ -21,9 +21,21 @@
       font-family: "FreebooterScript", "shaonv";
       padding: 0 150px;
       /* color: #9d0a0f; */
-      background-image: -webkit-linear-gradient(bottom, #000, #9d0a0f, #000);
-      -webkit-background-clip: text;
+      background-image: -webkit-linear-gradient(left, #000, #9d0a0f 25%, #000 50%, #9d0a0f 75%, #000);
       -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-background-size: 200% 100%;
+      -webkit-animation: masked-animation 2s infinite linear;
+    }
+
+    @-webkit-keyframes masked-animation {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: -100% 0;
+      }
     }
 
     #box {
